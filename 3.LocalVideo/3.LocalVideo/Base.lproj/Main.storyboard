@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="odg-hk-Iwt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--好烦-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__LocalVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vzo-cP-LfB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.094117647060000004" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="220" id="5oj-zZ-cX8" customClass="VideoCell" customModule="__LocalVideo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5oj-zZ-cX8" id="JQj-Z2-8Lp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoScreenshot01" translatesAutoresizingMaskIntoConstraints="NO" id="iwn-1d-bxt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gON-45-RLu">
+                                                    <rect key="frame" x="137" y="69" width="100" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="MRa-fO-0IY"/>
+                                                        <constraint firstAttribute="height" constant="80" id="eHb-BN-6k2"/>
+                                                    </constraints>
+                                                    <state key="normal" image="playBtn"/>
+                                                    <connections>
+                                                        <action selector="touchPlayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNK-p3-kP9"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你是不是傻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH6-zg-4hl">
+                                                    <rect key="frame" x="147.5" y="149" width="80" height="23"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="二蛋的春天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SI2-QN-Ohl">
+                                                    <rect key="frame" x="157.5" y="180" width="60" height="17"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gON-45-RLu" firstAttribute="centerY" secondItem="iwn-1d-bxt" secondAttribute="centerY" id="4CU-ed-pRA"/>
+                                                <constraint firstAttribute="trailing" secondItem="iwn-1d-bxt" secondAttribute="trailing" id="6hI-dZ-pot"/>
+                                                <constraint firstItem="kH6-zg-4hl" firstAttribute="centerX" secondItem="iwn-1d-bxt" secondAttribute="centerX" id="8Jx-Ke-juN"/>
+                                                <constraint firstItem="iwn-1d-bxt" firstAttribute="top" secondItem="JQj-Z2-8Lp" secondAttribute="top" id="8mE-nG-9OH"/>
+                                                <constraint firstAttribute="bottom" secondItem="iwn-1d-bxt" secondAttribute="bottom" id="DDq-f4-iSW"/>
+                                                <constraint firstItem="SI2-QN-Ohl" firstAttribute="top" secondItem="kH6-zg-4hl" secondAttribute="bottom" constant="8" id="Tpq-dd-oHp"/>
+                                                <constraint firstItem="gON-45-RLu" firstAttribute="centerX" secondItem="iwn-1d-bxt" secondAttribute="centerX" id="WJy-Y4-C02"/>
+                                                <constraint firstItem="iwn-1d-bxt" firstAttribute="leading" secondItem="JQj-Z2-8Lp" secondAttribute="leading" id="Yjx-XB-7Ft"/>
+                                                <constraint firstItem="kH6-zg-4hl" firstAttribute="top" secondItem="gON-45-RLu" secondAttribute="bottom" id="bnK-dl-lM0"/>
+                                                <constraint firstItem="SI2-QN-Ohl" firstAttribute="centerX" secondItem="iwn-1d-bxt" secondAttribute="centerX" id="nec-ft-76w"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bgImg" destination="iwn-1d-bxt" id="vcJ-id-ewc"/>
+                                            <outlet property="source" destination="SI2-QN-Ohl" id="kiK-e3-Vfw"/>
+                                            <outlet property="title" destination="kH6-zg-4hl" id="bXS-mn-xBQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.094117647060000004" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Vzo-cP-LfB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Oqk-HH-vQ0"/>
+                            <constraint firstItem="Vzo-cP-LfB" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="dKV-Va-EKe"/>
+                            <constraint firstItem="Vzo-cP-LfB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mnX-AC-ua1"/>
+                            <constraint firstItem="Vzo-cP-LfB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sat-A7-Oeh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="好烦" id="qga-bs-mE4"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vzo-cP-LfB" id="W80-es-wlK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LiK-h3-LgJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="odg-hk-Iwt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="ypi-wM-Lpk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.094117647060000004" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="S4N-HT-GZA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zy1-pk-4Ja" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="playBtn" width="60" height="60"/>
+        <image name="videoScreenshot01" width="375" height="220"/>
+    </resources>
+</document>
