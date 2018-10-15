@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ub9-pS-Tdo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-cd-ywy">
+                                <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="tj0-Za-wx8"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGy-CR-qok">
+                                <rect key="frame" x="137.5" y="461.5" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="H8v-pX-tUr"/>
+                                    <constraint firstAttribute="height" constant="40" id="cwC-Gg-uJU"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="touchPlayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tll-wx-SQZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYw-z1-dHX">
+                                <rect key="frame" x="166.5" y="531.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EYw-z1-dHX" firstAttribute="top" secondItem="qGy-CR-qok" secondAttribute="bottom" constant="30" id="0Hk-u2-5oa"/>
+                            <constraint firstAttribute="trailing" secondItem="Ub9-pS-Tdo" secondAttribute="trailing" id="6ff-Ek-KKY"/>
+                            <constraint firstItem="4aR-cd-ywy" firstAttribute="centerY" secondItem="Ub9-pS-Tdo" secondAttribute="centerY" id="B5T-8e-M7j"/>
+                            <constraint firstItem="Ub9-pS-Tdo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GTn-j4-yMh"/>
+                            <constraint firstItem="EYw-z1-dHX" firstAttribute="centerX" secondItem="Ub9-pS-Tdo" secondAttribute="centerX" id="Ykd-2x-7Qb"/>
+                            <constraint firstItem="qGy-CR-qok" firstAttribute="centerX" secondItem="Ub9-pS-Tdo" secondAttribute="centerX" id="dc2-FL-FlY"/>
+                            <constraint firstItem="qGy-CR-qok" firstAttribute="top" secondItem="4aR-cd-ywy" secondAttribute="bottom" constant="20" id="eJU-3t-m1x"/>
+                            <constraint firstAttribute="trailing" secondItem="4aR-cd-ywy" secondAttribute="trailing" id="eK8-lU-sZ3"/>
+                            <constraint firstItem="4aR-cd-ywy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iv8-UW-SOo"/>
+                            <constraint firstItem="4aR-cd-ywy" firstAttribute="centerX" secondItem="Ub9-pS-Tdo" secondAttribute="centerX" id="sH1-x9-2w1"/>
+                            <constraint firstItem="Ub9-pS-Tdo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sv8-cp-MiI"/>
+                            <constraint firstAttribute="bottom" secondItem="Ub9-pS-Tdo" secondAttribute="bottom" id="wZB-cn-WX2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgImg" destination="Ub9-pS-Tdo" id="KX4-LH-ODb"/>
+                        <outlet property="gamePicker" destination="4aR-cd-ywy" id="8Gg-Vg-WZn"/>
+                        <outlet property="playBtn" destination="qGy-CR-qok" id="9si-QN-z1E"/>
+                        <outlet property="resultBtn" destination="EYw-z1-dHX" id="QBO-Xs-DP0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
